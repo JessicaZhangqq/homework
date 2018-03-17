@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Create User
+        </title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <form action="create_user.html" method="get" enctype="application/x-w22-form-urlencoded">
+            <fieldset>
+                <legend>User Form</legend>
+                 <lable>User Name:</lable>
+                <input type="text" name="username" size="30" maxlength="12" required pattern="^[a-zA-Z]+$" title="Input only letters!"  >
+            </fieldset>
+            <fieldset>
+            <lable>Password</lable>
+            <input required type="password" name="password" size="30" maxlength="8" placeholder="password" pattern="\d+" title="Input only numbers">
+        </fieldset>
+         <fieldset>
+            <lable>Select your favourite superheroe</lable>
+            <input type="radio" name="superheros" value="Superman">Superman
+            <input type="radio" name="superheros" value="Batman">Batman
+            <input type="radio" name="superheros" value="Wonder Woman" checked>Wonder Woman
+            <input type="radio" name="superheros" value="Flash">Flash
+            <input type="radio" name="superheros" value="Thor & Hulk">Thor & Hulk
+           </fieldset>
+           <fieldset>
+               <label>Select your favourite video game</label>
+               <input name="videogames" type="checkbox" value="Fifa">Fifa
+               <input name="videogames" type="checkbox" value="NHL">NHL
+               <input name="videogames" type="checkbox" value="NHL">NHL
+               <input name="videogames" type="checkbox" value="reu" checked>Residen Evil & Uncharted
+               <input name="userid" value="2300" type="hidden">
+            </fieldset>
+            <label for="dateid">Birthday:</label>
+            <input id="dateid" type="date" value="1989-01-01">
+            <label for="emailid">Email:</label>
+            <input type="email" name="email" id="emailid" required>
+            <label for="urlid">Url:</label>
+            <input type="url" name="urlpersonal" id="urlid">
+            <input type="submit" name="login" height=“60” width="60">
+        </form>
+        <h3>Form 2</h3>
+        <form action=" https://www.google.ca/search" method="get">
+            <label for="nameid">Search</label>
+            <input type="search" name="q" id="nameid">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

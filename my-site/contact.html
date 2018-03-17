@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="description" content=" Learning HTML site using browser video and audio player">
+            <meta name="author" content="qianqian zhang">
+            <meta name="keywords" content="html, css, js, comit, skipthedishes, video, audio">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+        <title> Contact
+        </title>
+    </head>
+    <body>
+        <h1>Contact Me</h1>
+        <a href="my_page.html">Go Home</a>
+        <hr>
+        <form action="result.html" method="post" enctype="multipart/form-data">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Input your name" required pattern="^[a-zA-Z]+$" title="Input letters only"><br>
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Input your email address"><br>
+            <label>Whici cat you are interested:</label>
+            <input type="radio" name="cat" value="miaomiao"> Miaomio
+            <input type="radio" name="cat" value="rourou">Rourou <br>
+            <label>Which page do you like:</label>
+            <input type="checkbox" name="favoritePage"  value="miaomiao"> Miaomiao
+            <input type="checkbox" name="favoritePage"  value="rourou"> Rourou
+            <input type="checkbox" name="favoritePage"  value="osaka"> Osaka
+            <input type="checkbox" name="favoritePage"  value="shanghai"> Shanghai
+            <input type="checkbox" name="favoritePage"  value="contact"> contact
+
+            <div>
+                <label>When did you come Winnipeg:</label>
+                <input type="date" name="date"><br>
+                <label>Where are you from:</label>
+                <select>
+                        <option value="" selected>Please select a Country</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="chl">Chile</option>
+                        <option value="can" >Canada</option>
+                        <option value="China" >China</option>
+                        <option value="Thailand" >Thailand</option>
+                        <option value="Vitenam" >Vitenam</option>
+                        <option value="Poland" >Poland</option>
+                    </select>
+            </div>
+            <label>Leave a message:</label><br>
+            <textarea name="message" cols="70" rows="5">Initial textarea text!</textarea><br>
+            <label>Share your favorite photo:</label>
+            <input type="file" name="filename"><br>
+            <input type="submit" value="Submit">
+        </form>
+        </body>
+</html>
