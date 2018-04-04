@@ -1,0 +1,10 @@
+var firstName='jessica';
+var lastName='zhang';
+var age=30;
+var dateBirth='0401989';
+var address='99 dalhousie';
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(dateBirth);
+console.log(address);
