@@ -1,0 +1,10 @@
+var age=28;
+var phone=2042298689;
+var streetName= 'Waverley street';
+var streetNumber = 2475;
+console.log(`I'm ${age} ears old`);
+console.log(`My phone number is ${phone}`);
+console.log(`I live on ${streetNumber} ${streetName}`);
+var temp_age = `I'm ${age} ears old`;
+var temp_phone = `My phone number is ${phone}`;
+var temp_addr = `I live on ${streetNumber} ${streetName}`;
