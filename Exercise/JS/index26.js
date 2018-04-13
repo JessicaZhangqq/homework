@@ -1,0 +1,12 @@
+var hockyTeam = 'jets';
+var age = 120 ;
+var spanish = false ;
+var wellFare = null ;
+var undefinedVar = undefined;
+var mayor = 'Brian Bowman';
+console.log('hocky team:',hockyTeam,'type', typeof hockyTeam);
+console.log('age:',age, 'type:' , typeof age);
+console.log('speak spanish:',spanish,'type:',typeof spanish);
+console.log('wellfare:', wellFare,'type:',typeof wellFare);
+console.log('undefined var:',undefinedVar, 'type:', typeof undefinedVar);
+console.log('mayor name:',mayor, 'type:', typeof mayor);
