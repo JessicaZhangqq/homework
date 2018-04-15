@@ -6,58 +6,84 @@
             <meta name="author" content="qianqian zhang">
             <meta name="keywords" content="html, css, js, comit, skipthedishes, video, audio">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          
-        <title>Jessica's page</title>
+            <link href="index.css" type="text/css" rel="stylesheet" /> 
+        <title>Miaomiao's page</title>
         <link rel="shortcut icon" href="images/sakura.jpg" type="image/x-icon" >
     </head>
     <body>
         <header>
-        <h1>Hi, I am Jessica. Welcome to my page!</h1>
-        <h2>What's with Jessica!</h2>
-        <a href="share.html">Share</a>
-        <form action=" https://www.google.ca/search" method="get">
-            <label for="nameid">Search</label>
-            <input type="search" name="q" id="nameid">
-            <input type="submit" value="Submit">
-        </form>
+         <nav>
+             <div>
+                 <a>Home</a>
+             </div>
+             <div class='links'>
+                 <a href=#cat>Cats</a>
+                 <a href=#osaka>Life in Osaka</a>
+                 <a href=#shanghai>Life in Shanghai</a>
+                 <a href=#comIT>Learning at ComIT</a>
+                 <a href="share.html">Share</a>
+             </div>
+        </nav>
+         <div>    
+                <h1>Hi, I am Jessica. Welcome to my page!
+                What's with Jessica!</h1>
+            </div>
+            <div class='form'>
+                <a class='share' href="share.html">Share</a>
+                <img id="google" src="https://www.google.ca/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+                <form  action=" https://www.google.ca/search" method="get">
+                    <label  for="nameid">Google</label>
+                    <input id='search' type="search" name="query" id="nameid">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         <hr>
     </header>
-    <div>
-        <h3>I like cats! Here are my cats.</h3>
-        <a name="cat"></a>
-        <figure>
+    <a name="cat"></a>
+    <div >
+        <h3>I have two cats! Here they are.</h3>
+        <figure id="orange">
             <img src="images/miao.png" widht="200" height="200" alt="cat miaomiao's photo">
             <figcaption>I am miaomiao. I like sleeping, don't wake me up.</figcaption>
-            <a href="miao.html">Want to know more about me, click here.</a>
+            Want to know more about me,<a href="miao.html"> click here.</a>
         </figure>
-        <figure>
+        <figure id="grey">
             <img src="images/rourou.png" widht="200" height="200" alt="cat rourou's photo">
             <figcaption>I am rourou, I don't like being picked up.</figcaption>
-            <a href="rourou.html">Want to know more about me, click here.</a>
+            Want to know more about me, <a href="rourou.html">click here.</a>
         </figure>
     </div>
     <hr>
-    <h2>I am taking a training course at ComIT.</h2>
-    <div>
-        <img src="images/comgit.jpg" width="40%" height="40%"><br>
-        <a href="http://www.comit.org/">Learn to Code</a>
+    <a name="comIT"></a>
+    <div >
+        <h2>I am taking a training course at ComIT.</h2>
+        <div >
+            <img class='left' src="images/comgit.jpg" width="40%" height="40%"><br>
+            <a href="http://www.comit.org/">Learn to Code</a>
+            <span>HTML CSS Javascript NodeJS MongoDB</span>
+        </div>
     </div>
     <hr>
-    <a name="osaka"></a>
-    <h2>Osaka, my favorite city.</h2>
-    <div>
-        <img src="images/osakaj1.jpg" width="40%" height="40%"><br>
-        <a href="osaka.html">Learn more</a>
+    <div class="center">
+        <a name="osaka"></a>
+        <h2>Osaka, my favorite city.</h2>
+        <div >
+            <img src="images/osakaj1.jpg" width="40%" height="40%"><br>
+            <a href="osaka.html">Learn more</a>
+        </div>
     </div>
     <hr>
     <a name="shanghai"></a>
-    <h2>Shanghai, My second hometown.</h2>
-    <div>
-        <img src="http://static1.gensler.com/uploads/hero_element/2066/thumb_desktop/thumbs/hero_exp_shanghai-tower_tall-bldgs_1500x750.jpg" width="40%" height="40%"><br>
-        <a href="shanghai.html">Learn more</a>
+    <div class="right">
+        <a name="shanghai"></a>
+        <h2>Shanghai, My second hometown.</h2>
+        <div >
+            <img src="http://static1.gensler.com/uploads/hero_element/2066/thumb_desktop/thumbs/hero_exp_shanghai-tower_tall-bldgs_1500x750.jpg" width="40%" height="40%"><br>
+            <a href="shanghai.html">Learn more</a>
+        </div>
     </div>
     <section>
-        <audio src="" >My favorite song.</audio>
+        <audio src="https://grantleephillips.bandcamp.com/track/blind-tom" >My favorite song.</audio>
     </section>
     
     </body>
