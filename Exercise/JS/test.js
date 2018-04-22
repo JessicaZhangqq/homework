@@ -1,5 +1,3 @@
-let number = 1;
+var message = 'first';
 
-number += 10;
-
-console.log(number); // 11
+console.log(message.charAt(0).toUpperCase()+message.slice(1,message.length));
