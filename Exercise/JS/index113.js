@@ -1,15 +1,22 @@
+let perimiter;
 function getShapePerimiter(base,height){
-   let perimiter;
     if(base===height){
-        perimiter=base*4;
+       return base*4;
     }else{
-        perimiter=(base+height)*2;
+        return (base+height)*2;
     }
-    if(perimiter>100){
-        console.log('The perimiter is to big');
-    }else{
-    console.log(`${perimiter}is the shape perimiter`) ;
-    }
+    
 }
-getShapePerimiter(9,19);
-getShapePerimiter(99,99);
+
+perimiter=getShapePerimiter(9,19);
+if(perimiter>100){
+    console.log('The perimiter is to big');
+}else{
+    console.log('The perimiter is fine') ;
+}
+perimiter= getShapePerimiter(99,99);
+if(perimiter>100){
+    console.log('The perimiter is to big');
+}else{
+    console.log('The perimiter is fine') ;
+}

@@ -1,0 +1,12 @@
+const iceCreamFlavors = [];
+iceCreamFlavors.unshift('Pepper');
+iceCreamFlavors.unshift('Salt');
+iceCreamFlavors.unshift('Vanilla');
+iceCreamFlavors.unshift('Chocolate');
+iceCreamFlavors.unshift('Chocolate');
+iceCreamFlavors.unshift('Mint');
+iceCreamFlavors.unshift('Cookie Dough');
+iceCreamFlavors.unshift('Strawberry');
+iceCreamFlavors.unshift('Mango');
+iceCreamFlavors.unshift('Strawberry');
+console.log(iceCreamFlavors);
