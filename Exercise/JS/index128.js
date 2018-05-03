@@ -1,5 +1,3 @@
-
-
 const iceCreamFlavors = [
     'Pepper',
     'Salt',
@@ -12,8 +10,12 @@ const iceCreamFlavors = [
     'Mango',
     'Strawberry'
     ];
-    iceCreamFlavors.pop();
-    iceCreamFlavors.pop();
-    iceCreamFlavors.pop();
-    iceCreamFlavors.pop();
+    var des =iceCreamFlavors.pop();
+    console.log(des);
+    des= iceCreamFlavors.pop();
+    console.log(des);
+    des= iceCreamFlavors.pop();
+    console.log(des);
+    des= iceCreamFlavors.pop();
+    console.log(des);
     console.log(iceCreamFlavors);
