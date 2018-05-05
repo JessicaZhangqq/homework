@@ -6,11 +6,16 @@ const user = {
 console.log(user.username,user.password);
 //second output
 var returnUser;
+var firstChar;
 for(let i=0;i<user.username.length;i++){
     if(i==0){
-       returnUser= user.username.charAt(i).toUpperCase;
+        firstChar=(user.username).charAt(i);
+       returnUser= firstChar.toUpperCase;
+       console.log(returnUser);
     }else{
         returnUser+=user.username.charAt(i);
     }
 }
+firstChar=(user.username).charAt(0);
+       returnUser= firstChar.toUpperCase;
 console.log(returnUser);
