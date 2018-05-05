@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>test</title>
+         <!-- Required meta tags -->
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <title>Hello, world!</title>
+         <style>
+             .row div.col{
+                 border:1px solid silver;
+             }
+             .row div{
+                 border:1px solid silver;
+             }
+             .row div.col-sm-6{
+                 border:1px solid yellowgreen;
+             }
+             .row div.col-sm-5{
+                 border:1px solid pink;
+             }
+         </style>
+    </head>
+    <body>
+        <div class="container" style="margin-top:30px;">
+           <div class="row">
+               <div class="col">class="col"column</div>
+               <div class="col">class="col"column</div>
+               <div class="col">class="col"column</div>
+           </div>
+           <h3>assign size to column</h3>
+           <div class="row">
+               <div class="col-4">column</div>
+               <div class="col-5">column</div>
+            </div>
+            <h3>with break point</h3>
+            <div class="row">
+                <div class="col-sm-6">asign size</div>
+                <div class="col-sm-6">the biggest total size of one row is 12</div>
+                <div class="col-sm-5">if it's bigger than 12, it will start from a new line</div>
+            </div>
+            <h4>fit for different size of screen</h4>
+            <div class="row">
+                    <div class="cold-lg-10 col-sm-6 col-md-3">asign size</div>
+                    <div class="cold-lg-10 col-sm-6 col-md-3">the biggest total size of one row is 12</div>
+                    <div class="cold-lg-10 col-sm-5 col-md-3">if it's bigger than 12, it will start from a new line</div>
+                </div>
+        </div>
+    </body>
+</html>
