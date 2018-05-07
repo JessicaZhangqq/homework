@@ -7,15 +7,10 @@ console.log(user.username,user.password);
 //second output
 var returnUser;
 var firstChar;
-for(let i=0;i<user.username.length;i++){
-    if(i==0){
-        firstChar=(user.username).charAt(i);
-       returnUser= firstChar.toUpperCase;
-       console.log(returnUser);
-    }else{
-        returnUser+=user.username.charAt(i);
-    }
-}
-firstChar=(user.username).charAt(0);
-       returnUser= firstChar.toUpperCase;
+firstChar=user.username[0].toUpperCase();
+returnUser=firstChar+user.username.slice(1,6);
 console.log(returnUser);
+//remove 1960
+const password2=user.password;
+const newPassword=password2.slice(0,6)+' '+password2.slice(10,17);
+console.log(newPassword);

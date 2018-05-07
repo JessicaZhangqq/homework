@@ -1,7 +1,8 @@
-const text = 'JavaScript rocks!! right?';
-const lastCharacterPosition = text.length - 1;
-const lastCharacter = text.charAt(lastCharacterPosition);
+var superText = 'superscript'; 
+var subText = 'subscript'; 
 
-console.log(lastCharacter); // ?
+console.log('This is what a ' + superText.sup() + ' looks like.'); 
+// This is what a <sup>superscript</sup> looks like 
 
-console.log( text.charAt(text.length - 1) ); // ?
+console.log('This is what a ' + subText.sub() + ' looks like.'); 
+// This is what a <sub>subscript</sub> looks like.
