@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>exercise 11</title>
+        <script>
+
+      
+       let username= window.prompt("input your username:");
+        const password=window.prompt("input your password:");
+        console.log('Welcome',username);
+        setTimeout(function(){
+          if( window.confirm('Do you still want to be logged?')){
+              console.log(`${username} your session has been restored`);
+          }else{
+              console.log(`${username} your session has been expired`);
+          }
+       },10000);
+       
+       
+        </script>
+    </head>
+    <body>
+            
+        
+      </body>
+</html>
