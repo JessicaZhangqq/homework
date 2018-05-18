@@ -1,26 +1,30 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>exercise 12</title>
-        <script>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+    window.onload=function(){
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+      console.log(checkboxes);
+      const female = checkboxes[0];
+      const male = checkboxes[1];
 
-          window.onload=function(){
-            const div = document.querySelector('div');
-const children = div.children;
-const firstChildElement = children[0];
+      console.log(female.checked);  // returns true as the element has the checked attribute
+      female.checked = false; // Set's the checkbox checked property to false
+      console.log(female.value); // returns f as it's the element value
 
-console.log(firstChildElement); // <p>Child Element</p>
-console.log(children.item(0));
-          }
-       
-        </script>
-    </head>
-    <body>
-        <div>
-            <p>Child Element</p>
-            <p>Child Element</p>
-            <p>Child Element</p>
-            <p>Child Element</p>
-          </div>
-        
-      </body>
+      male.checked;  // returns false as the element is not checked
+      male.checked = true; // Set checked to true
+      console.log(male.value); // returns m as it's the element value
+    }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="checkbox" name="sexo" value="f" checked> Female
+    <input type="checkbox" name="sexo" value="m"> Male
+  </form>
+  <div></div>
+</body>
 </html>

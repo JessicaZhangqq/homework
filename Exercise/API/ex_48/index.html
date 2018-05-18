@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <script>
+    window.onload=function(){
+      const form = document.querySelector('form');
+      const formElements=[
+          form.elements[0],
+          form.elements[1],
+          form.elements[2],
+          ] ;
+      console.log(formElements[0]);
+      formElements.forEach(function(element){
+          element.onfocus=function(){
+              element.style.color='red';
+              //it seems doesn't work
+              element.style.boxshadow='2px 3px 170px -8px rgba(0,0,0,0.8)';
+          }
+          element.onblur=function(){
+              element.style.boxshadow='';
+
+          }
+      });
+
+     form.onsubmit=function(event){
+         event.preventDefault();
+         window.alert(`user name ${formElements[1].value},password: ${formElements[1].value}`)
+     }
+    }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+</body>
+</html>

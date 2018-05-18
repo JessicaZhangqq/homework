@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload=function(){
+            const ulElement=document.querySelector('ul');
+            const  liElements=ulElement.children;
+            //whe the first li element is no null
+            while(liElements[0]){
+              ulElement.removeChild(liElements[0]);
+            }
+        }
+    </script>
+  </head>
+  <body>
+        <ul>
+                <li>Bannana</li>
+                <li>Apple</li>
+                <li>Peach</li>
+                <li>Eggs</li>
+                <li>Tomatto</li>
+                <li>Lettuce</li>
+                <li>Milk</li>
+              </ul>
+  </body>
+</html>

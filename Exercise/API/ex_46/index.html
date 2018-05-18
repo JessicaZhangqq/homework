@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+    window.onload=function(){
+        const form=document.querySelector('form');
+        const select=document.querySelector('select');
+        const index=select.selectedIndex;
+        const idAttribute=select.getAttribute('id');
+
+        const item=select.options[index];
+
+        console.log(idAttribute,item);
+        form.onsubmit=function(event){
+            event.preventDefault;
+            window.alert(`${item.innerHTML} has been selected and it has ${idAttribute} as id`);
+        }
+    }
+</script>
+</head>
+<body>
+  <form action="save_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <select id="countries">
+      <option value="1">Argentina</option>
+      <option value="2">Brazil</option>
+      <option value="3">Canada</option>
+      <option value="4">Colombia</option>
+    </select>
+    <input type="submit" name="submit" value="Submit" />
+  </form>
+</body>
+</html>

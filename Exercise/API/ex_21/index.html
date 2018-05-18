@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+  <script>
+      window.onload=function(){
+        const  firstElement=document.querySelector('li');
+        firstElement.classList.add('orange');
+        //add second siblings class 'orange'
+        const followingElement1=firstElement.nextElementSibling;
+        followingElement1.classList.add('orange');
+
+        const followingElement2=followingElement1.nextElementSibling;
+        followingElement2.classList.add('orange');
+
+        const followingElement3=followingElement2.nextElementSibling;
+        followingElement3.classList.add('orange');
+        //add the last siblings calss 'orange'
+        const followingElement4=followingElement3.nextElementSibling;
+        followingElement4.classList.add('orange');
+        //Now we need to go back using previousElementSibling
+        //Add red class to Item 3
+        const thirdElement=followingElement4.previousElementSibling.previousElementSibling;
+            thirdElement.classList.replace('orange','red');
+            
+        //    Add green class to Item 1
+        const firstSibling=thirdElement.previousElementSibling.previousElementSibling;
+        firstSibling.classList.replace('orange','green');
+      }
+  </script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+            window.onload=function(){
+                const firstButton=document.querySelector('button');
+                const clickHandleEvent=function(){
+                    window.alert('You clicked an event listened element');
+                    firstButton.style.color='red';
+                }
+                //Add other event listener to this button reading the doc and using your imagination!
+                const secondButton=document.getElementById('secondButton');
+                function greeting(){
+                    window.alert('You clicked an event listened element');
+                }
+                //Use the greeting function as addEventListener callback
+                firstButton.addEventListener('click',greeting);
+                const removeEventListener=function(){
+                    firstButton.removeEventListener('click',greeting);
+                }
+                secondButton.addEventListener('click',removeEventListener);
+                let link = document.querySelector('a');
+                //Select the link element using querySelector method
+                //Add the link element an click event handler using addEventListener
+            link.addEventListener('click', function(event) {
+            event.preventDefault();  // by calling preventDefault the event is not going to trigger the default behaivour
+            window.alert('This link doesn\'t send us to a differen page as we\'re preventing the default behaviour');
+            });
+
+            //ex_36
+            //Select the html element using querySelector method
+            const htmlElement=document.querySelector('html');
+           // Add a click event handler to the html element using addEventListener
+           htmlElement.addEventListener('click',function(event){
+                console.log(`Click possition: x-axis: ${event.clientX},y-axis: ${event.clientY}`);
+           });
+        }
+        </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

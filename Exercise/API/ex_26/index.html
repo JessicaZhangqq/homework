@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload=function(){
+            const bodyElement=document.querySelector('body');
+           const name=[
+               'jessica',
+               'ania',
+               'anna',
+               'jhon',
+               'jason',
+               'mary',
+               'jack',
+               'jacob',
+               'jeff',
+               'jessi'
+           ];
+           const ulElement=document.createElement('ul');
+           for(let i=0;i<name.length;i++){
+               const liElement=document.createElement('li');
+               liElement.innerHTML=name[i];
+               ulElement.appendChild(liElement);
+           }
+           bodyElement.appendChild(ulElement);
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

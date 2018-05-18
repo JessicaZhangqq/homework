@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+      window.onload=function(){
+          const h1Element=document.querySelector('h1');
+          const h1Content=h1Element.innerText;
+          const pElement=document.querySelector('p');
+          const pContent=pElement.textContent;
+          console.log(h1Element);
+          console.log(h1Content);
+          //Replace the h1 element content for the paragraph one
+          h1Element.textContent=pContent;
+          //Replace the p element content for the title one
+          pElement.textContent=document.querySelector('title').innerHTML;
+      }
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+</body>
+</html>

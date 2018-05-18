@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+      window.onload=function(){
+          const ulElement=document.querySelector('ul');
+          ulElement.innerHTML='<li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li>';
+    //Show the ul element children using both children and innerHTML properties
+    const childrenElement=ulElement.children;
+    for(let i=0;i<childrenElement.length;i++){
+    console.log(childrenElement[i],childrenElement[i].innerHTML);
+    }
+      }
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+  <ul></ul>
+</body>
+</html>

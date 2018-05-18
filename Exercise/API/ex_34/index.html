@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+            window.onload=function(){
+                const firstButton=document.querySelector('button');
+                const clickHandleEvent=function(){
+                    window.alert('You clicked an event listened element');
+                    firstButton.style.color='red';
+                }
+                //Add other event listener to this button reading the doc and using your imagination!
+                const secondButton=document.getElementById('secondButton');
+                function greeting(){
+                    window.alert('You clicked an event listened element');
+                }
+                //Use the greeting function as addEventListener callback
+                firstButton.addEventListener('click',greeting);
+                const removeEventListener=function(){
+                    firstButton.removeEventListener('click',greeting);
+                }
+                secondButton.addEventListener('click',removeEventListener);
+
+            }
+        </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+  </body>
+</html>

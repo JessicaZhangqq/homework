@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload=function(){
+            const bodyElement=document.querySelector('body');
+           const number=[
+               199,
+               799,
+               696,
+               25,
+               37,
+               66,
+               888,
+               98
+           ];
+           const ulElement=document.createElement('ul');
+           for(let i=0;i<number.length;i++){
+               const liElement=document.createElement('li');
+               liElement.innerHTML=`Item ${number[i]}`;
+               if(number[i]%2==0){
+                   liElement.style.color='#ddd';
+               }else{
+                   liElement.style.color='#eee';
+               }
+               ulElement.appendChild(liElement);
+           }
+           bodyElement.appendChild(ulElement);
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

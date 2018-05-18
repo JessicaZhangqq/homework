@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <style>
+        .striked{
+            text-decoration:line-through ;
+        }
+        li{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+     window.onload=function(){
+         const body=document.querySelector('body');
+         //Dynamically create a ul element
+        const   ul=document.createElement('ul');
+        const weeklyChores=[
+            'exercise 1',
+            'wash clothers',
+            'brush cats',
+            'sleeping',
+            'running',
+            'watching drama',
+            'cooking lunch',
+            'cooking dinner',
+            'making menu',
+            'palying game'
+        ];
+        body.appendChild(ul);
+        //const liElement;
+        //Create an li element for each item in the weeklyChores array and assign the chore name
+        for(let i=0;i<weeklyChores.length;i++){
+            const  liElement=document.createElement('li');
+            liElement.innerHTML=weeklyChores[i];
+            //Add the li elements to the ul element
+            ul.appendChild(liElement);
+
+            //console.log(liElement);
+            //Add a click event handler to each li element
+            liElement.addEventListener('click',function(){
+               // console.log('is it work?',liElement);
+                liElement.classList.toggle('striked');
+            });
+        }
+    }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

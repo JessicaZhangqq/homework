@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload=function(){
+            const bodyElement=document.querySelector('body');
+            let i=0;
+            const ulElement=document.createElement('ul');
+            bodyElement.appendChild(ulElement);
+            while(window.confirm('would you like to input a user name?')){
+                const username=window.prompt('Please input a user name!');
+                const liElement=document.createElement('li');
+                liElement.innerHTML=username;
+                if(i%2==0){
+                    liElement.style.color="#ddd";
+                }else{
+                    liElement.style.color="#eee";
+                }
+                //at the end a loop, append li element
+                ulElement.appendChild(liElement);
+                i++;
+            }
+
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
