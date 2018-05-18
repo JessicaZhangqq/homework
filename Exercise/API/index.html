@@ -2,29 +2,69 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Form Properties</title>
+  <title>JSON</title>
   <script>
-    window.onload=function(){
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-      console.log(checkboxes);
-      const female = checkboxes[0];
-      const male = checkboxes[1];
+      window.onload=function(){
+        const form = document.querySelector('form');
+  const input = document.querySelector('input');
+  
+  function toggleLoader() {
+    const loader = document.querySelector('.loading');
+    loader.classList.toggle('hide');
+  }
 
-      console.log(female.checked);  // returns true as the element has the checked attribute
-      female.checked = false; // Set's the checkbox checked property to false
-      console.log(female.value); // returns f as it's the element value
+  function showError(error) {
+    console.log(error.message);
+  }
 
-      male.checked;  // returns false as the element is not checked
-      male.checked = true; // Set checked to true
-      console.log(male.value); // returns m as it's the element value
-    }
+  function parseResponseAsJSON(response) {
+    return response.json();
+  }
+
+  function getTvEpisodes(data) {
+    return data;
+  }
+
+  function createElement(data) {
+    const show = data.show;
+    const responseElement=document.getElementById('jsonresponse');
+    const div = document.createElement('div');
+    const h1 = document.createElement('h1');
+    const divDescription = document.createElement('div');
+    
+    
+  
+    h1.innerText = show.title;
+    div.appendChild(h1);
+    
+    
+    divDescription.innerHTML = show.release_date;
+    div.appendChild(divDescription);
+
+    content.appendChild(div);
+  }
+
+  function showEpisodes(episodes) {
+    episodes.forEach(createElement);
+  }
+    const apiURL = 'https://swapi.co/api/films/';
+
+    fetch(apiURL)
+      .then(parseResponseAsJSON)//return response.json();
+      .then(getTvEpisodes)
+      // return data;
+      .then(showEpisodes)
+      //   toggleLoader();
+      // episodes.forEach(createElement);
+
+      .catch(showError);
+  
+
+// Finally show the following values for each film you get back:
+}
   </script>
 </head>
 <body>
-  <form action="save_user.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
-    <input type="checkbox" name="sexo" value="f" checked> Female
-    <input type="checkbox" name="sexo" value="m"> Male
-  </form>
-  <div></div>
+  <div id="jsonresponse">hi</div>
 </body>
 </html>

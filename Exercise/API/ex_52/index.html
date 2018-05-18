@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSON</title>
+  <script>
+      window.onload=function(){
+    // Use fetch to call the following api: https://swapi.co/api/films/
+    const apiURL='https://swapi.co/api/films/';
+//     You need to check that the response it's ok
+// Then convert the response from JSON string object to a JavaScript one
+    
+
+    const jsonresponseElement=document.getElementById('jsonresponse');
+    
+    //show films
+    var i=0;
+    function showFilm(films){
+        films.forEach(function(film){
+        const div=document.createElement('div');
+        jsonresponseElement.appendChild(div);
+        //create a h1 element
+        const h1=document.createElement('h1');
+        h1.innerHTML=film.title;
+        div.appendChild(h1);
+        //Create p element
+        const span=document.createElement('span');
+        span.innerHTML='Episode ID:'+film.episode_id;
+        div.appendChild(span);
+//add release date
+const dateElement=document.createElement('p');
+        dateElement.innerHTML='Release Date:'+film.release_date;
+        div.appendChild(dateElement);
+        //add descrption
+        const p=document.createElement('p');
+        p.innerHTML=film.opening_crawl;
+        div.appendChild(p);
+        
+        console.log(i++);
+        });
+    }
+    function showError(error) {
+    console.log(error.message);
+     }
+
+    fetch(apiURL)
+    .then(function(resopnse){
+        return resopnse.json();
+    }).then(function(data){
+        // return data;
+        // console.log(data);
+        console.log(data);
+        console.log(data.results);
+        const results=data.results;
+        showFilm(results);
+    });
+
+// Finally show the following values for each film you get back:
+}
+  </script>
+</head>
+<body>
+  <div id="jsonresponse"></div>
+</body>
+</html>

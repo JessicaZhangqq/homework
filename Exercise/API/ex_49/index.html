@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <script>
+    window.onload=function(){
+        const form=document.querySelector('form');
+        const username=form.elements[0];
+        const password=form.elements[1];
+        console.log(username);
+        form.onsubmit=function(event){
+            event.preventDefault();
+        // console.log('hi',username.value);
+        const element=document.getElementById('errors');
+           //When the user submits the form validate that the username and password are not empty
+            if(username.value==''&&password.value==''){
+                // console.log('error',element);
+                element.classList.add('error');
+                element.innerHTML='Please input a username and password';
+            }
+        }
+    }
+</script>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div id="errors"></div>
+</body>
+</html>

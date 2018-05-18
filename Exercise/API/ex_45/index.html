@@ -5,14 +5,44 @@
   <title>Form Properties</title>
   <script>
     window.onload=function(){
-        const form=document.querySelector('form');
-        const username=form.elements[0];
-        const password=form.elements[1];
-  console.log(username);
-        form.onsubmit=function(event){
-            event.preventDefault;
-            window.alert(`user name:${username.value},password :${password.value}`);
-        }
+        // Stringify example with a JavaScript object to a JSON one
+
+const user = {
+  username: 'pepe',
+  password: '12345',
+  email: 'pepe@gmail.com',
+  married: true,
+  childrens: ['maria', 'juan']
+}
+
+const JSONuser = JSON.stringify(user); // returns a JSON object with the user representation
+
+console.log(JSONuser);
+/*
+  {
+    "username":"pepe",
+    "password":"12345",
+    "email":"pepe@gmail.com",
+    "married":true,
+    "childrens":["maria","juan"]
+  }
+*/
+
+// Parse example
+
+const JSONuser = JSON.parse(JSONuser); // Returns a JavaScript objectretorna un objeto de ECMAScript
+
+console.log(JSONuser);
+
+/*
+  {
+    username: "pepe", 
+    password: "12345", 
+    email: "pepe@gmail.com", 
+    married: true, 
+    childrens: ["maria", "juan"]
+  }
+*/
     }
 </script>
 </head>
