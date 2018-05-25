@@ -1,0 +1,9 @@
+npm run dev:start  //command
+nodemon // module used to restart server when changes happened
+
+app.uss('/products',productRouther)
+//when handle request start from products path ,use productRouther function to handle it
+
+template module   pug
+no nedd to require it,we can just use it
+
