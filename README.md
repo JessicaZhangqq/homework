@@ -1,6 +1,6 @@
 # Node.js Winnipeg
 
-This project it's to learn HTML, CSS, JS, Node.js and MongoDB
+This project is all the exercise I did in the traing course.
 
 1. [HTML exercises](Exercise/html)
 1. [CSS exercises](Exercise/css)
